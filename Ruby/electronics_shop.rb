@@ -8,16 +8,15 @@ def getMoneySpent(keyboards, drives, b)
   i = 0
   while i < keyboards.length
     drives.each do |el|
-      additions_arr << if el + keyboards[i] <= budget
-                         el + keyboards[i]
-                       else
-                         -1
-                       end
+      el + keyboards[i] <= budget ? additions_arr << el + keyboards[i] : additions_arr
     end
     i += 1
   end
 
-  return additions_arr.select { |el| el <= budget }.max
-
-  additions_arr.last
+  additions_arr.empty? ? -1 : additions_arr.max
 end
+
+keyboards = [1, 3, 1]
+drives = [8, 2, 1]
+
+puts getMoneySpent(keyboards, drives, 10)
