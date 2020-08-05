@@ -1,7 +1,6 @@
 def repeated_string(string, num)
   num_of_multiples = num / string.length
   remainder = num % string.length
-  result = 0
   count = 0
   extra_letter = 0
 
@@ -12,7 +11,7 @@ def repeated_string(string, num)
 
     i += 1
   end
-  result = num_of_multiples * count + extra_letter
+  num_of_multiples * count + extra_letter
 end
 
 puts repeated_string('aba', 10)

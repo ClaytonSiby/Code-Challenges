@@ -1,6 +1,5 @@
-def getMoneySpent(keyboards, drives, b)
+def get_money_spent(keyboards, drives, budget)
   # sort both arrays in ascending order.
-  budget = b
   keyboards.sort!
   drives.sort!
 
@@ -19,4 +18,4 @@ end
 keyboards = [1, 3, 1]
 drives = [8, 2, 1]
 
-puts getMoneySpent(keyboards, drives, 10)
+puts get_money_spent(keyboards, drives, 10)
